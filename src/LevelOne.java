@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        diferenca();
+        consumo();
     }
 
     public static void somaSimples(){
@@ -48,5 +48,17 @@ public class LevelOne {
         int result = A * B - C * D;
 
         System.out.println("DIFERENCA = "+ result);
+    }
+
+    public static void consumo(){
+        int X;
+        double Y;
+        Scanner sc = new Scanner(System.in);
+        X = sc.nextInt();
+        Y = sc.nextDouble();
+
+        double result = X / Y;
+
+        System.out.printf("%.3f km/l", result);
     }
 }
