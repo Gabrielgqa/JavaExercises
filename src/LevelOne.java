@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        consumo();
+        distanciaEntreDoisPontos();
     }
 
     public static void somaSimples(){
@@ -60,5 +60,19 @@ public class LevelOne {
         double result = X / Y;
 
         System.out.printf("%.3f km/l", result);
+    }
+
+    public static void distanciaEntreDoisPontos(){
+        double x1, y1, x2, y2;
+
+        Scanner sc = new Scanner(System.in);
+        x1 = sc.nextDouble();
+        y1 = sc.nextDouble();
+        x2 = sc.nextDouble();
+        y2 = sc.nextDouble();
+
+        double result = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+        System.out.printf("%.4f", result);
     }
 }
