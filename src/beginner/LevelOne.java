@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        numerosPares();
+        numerosPositivos();
     }
 
     public static void somaSimples(){
@@ -149,5 +149,23 @@ public class LevelOne {
         for(int i =2; i <=100; i+=2){
             System.out.println(i);
         }
+    }
+
+    public static void numerosPositivos(){
+        Locale.setDefault(Locale.US);
+        double[] numeros = new double[6];
+        int ctd = 0;
+        Scanner sc = new Scanner(System.in);
+
+        for (int i = 0; i < numeros.length; i++){
+            numeros[i] = sc.nextDouble();
+            if(numeros[i] > 0) {
+                ctd++;
+            }
+        }
+
+        System.out.println(ctd + " valores positivos");
+
+        sc.close();
     }
 }
