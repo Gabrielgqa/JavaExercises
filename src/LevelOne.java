@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        distanciaEntreDoisPontos();
+        distancia();
     }
 
     public static void somaSimples(){
@@ -74,5 +74,14 @@ public class LevelOne {
         double result = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 
         System.out.printf("%.4f", result);
+    }
+
+    public static void distancia(){
+        int km;
+
+        Scanner sc = new Scanner(System.in);
+        km = sc.nextInt();
+
+        System.out.printf("%d minutos", km*2);
     }
 }
