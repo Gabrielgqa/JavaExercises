@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        numerosPositivos();
+        paresEntreCincoNumeros();
     }
 
     public static void somaSimples(){
@@ -165,6 +165,23 @@ public class LevelOne {
         }
 
         System.out.println(ctd + " valores positivos");
+
+        sc.close();
+    }
+
+    public static void paresEntreCincoNumeros(){
+        int[] numeros = new int[5];
+        int ctd = 0;
+        Scanner sc = new Scanner(System.in);
+
+        for (int i = 0; i < numeros.length; i++){
+            numeros[i] = sc.nextInt();
+            if(numeros[i] % 2 ==0) {
+                ctd++;
+            }
+        }
+
+        System.out.println(ctd + " valores pares");
 
         sc.close();
     }
