@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        conversaoDeTempo();
+        lanche();
     }
 
     public static void somaSimples(){
@@ -106,5 +106,40 @@ public class LevelOne {
         int segundos = (tempo - horas * 60 * 60) - minutos * 60;
 
         System.out.println(horas + ":" + minutos + ":" + segundos);
+    }
+
+    public static  void lanche(){
+        int codigo, quantidade;
+        Scanner sc = new Scanner(System.in);
+        codigo = sc.nextInt();
+        quantidade = sc.nextInt();
+        double result;
+
+        switch (codigo) {
+            case 1:
+                result = quantidade * 4.00;
+                break;
+            case 2:
+                result = quantidade * 4.50;
+                break;
+            case 3:
+                result = quantidade * 5.00;
+                break;
+            case 4:
+                result = quantidade * 2.00;
+                break;
+            case 5:
+                result = quantidade * 1.50;
+                break;
+            default:
+                result = 0;
+                break;
+        }
+
+        if (result > 0){
+            System.out.printf("Total: %.2f", result);
+        } else {
+            System.out.println("Código informado é inválido");
+        }
     }
 }
