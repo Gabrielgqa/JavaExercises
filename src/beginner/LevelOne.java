@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        lanche();
+        numerosPares();
     }
 
     public static void somaSimples(){
@@ -142,6 +142,12 @@ public class LevelOne {
             System.out.printf("Total: %.2f", result);
         } else {
             System.out.println("Código informado é inválido");
+        }
+    }
+
+    public static void numerosPares(){
+        for(int i =2; i <=100; i+=2){
+            System.out.println(i);
         }
     }
 }
