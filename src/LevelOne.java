@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        gastoDeCombustivel();
+        conversaoDeTempo();
     }
 
     public static void somaSimples(){
@@ -94,5 +94,17 @@ public class LevelOne {
         double result = hr * km / 12.0;
 
         System.out.printf("%.3f",result);
+    }
+
+    public static void conversaoDeTempo(){
+        int tempo;
+        Scanner sc = new Scanner(System.in);
+        tempo = sc.nextInt();
+
+        int horas = tempo / 60 / 60;
+        int minutos = (tempo - horas * 60 * 60) / 60;
+        int segundos = (tempo - horas * 60 * 60) - minutos * 60;
+
+        System.out.println(horas + ":" + minutos + ":" + segundos);
     }
 }
