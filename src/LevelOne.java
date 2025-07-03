@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        distancia();
+        gastoDeCombustivel();
     }
 
     public static void somaSimples(){
@@ -83,5 +83,16 @@ public class LevelOne {
         km = sc.nextInt();
 
         System.out.printf("%d minutos", km*2);
+    }
+
+    public static void gastoDeCombustivel(){
+        int hr, km;
+        Scanner sc = new Scanner(System.in);
+        hr = sc.nextInt();
+        km = sc.nextInt();
+
+        double result = hr * km / 12.0;
+
+        System.out.printf("%.3f",result);
     }
 }
