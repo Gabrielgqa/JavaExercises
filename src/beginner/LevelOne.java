@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        paresImparesPositivosNegativos();
+        seisNumerosImpares();
     }
 
     public static void somaSimples(){
@@ -211,5 +211,18 @@ public class LevelOne {
         System.out.println(ctdNegativos + " valor(es) negativo(s)");
 
         sc.close();
+    }
+
+    public static void seisNumerosImpares(){
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+         for (int i = 0; i<6; i++){
+             if(x % 2 ==0){
+                 x+=1;
+             } else {
+                 x+=2;
+             }
+             System.out.println(x);
+         }
     }
 }
