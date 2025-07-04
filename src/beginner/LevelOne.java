@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        intervalo2();
+        quadradoDePares();
     }
 
     public static void somaSimples(){
@@ -243,5 +243,15 @@ public class LevelOne {
 
         System.out.println(somaDentro + " in");
         System.out.println(somaFora + " out");
+    }
+
+    public static void quadradoDePares(){
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int i = 2;
+        while(i <= N){
+            System.out.println(i+"^2 = "+ (int) Math.pow(i, 2));
+            i+=2;
+        }
     }
 }
