@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        quadradoDePares();
+        tabuada();
     }
 
     public static void somaSimples(){
@@ -252,6 +252,14 @@ public class LevelOne {
         while(i <= N){
             System.out.println(i+"^2 = "+ (int) Math.pow(i, 2));
             i+=2;
+        }
+    }
+
+    public static void tabuada(){
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        for(int i = 1; i<=10; i++){
+            System.out.println(i+" x "+N+"= "+ i*N);
         }
     }
 }
