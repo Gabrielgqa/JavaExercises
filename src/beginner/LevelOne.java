@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LevelOne {
     public static void main(String [] args){
-        tabuada();
+        mediaPonderada();
     }
 
     public static void somaSimples(){
@@ -260,6 +260,22 @@ public class LevelOne {
         int N = sc.nextInt();
         for(int i = 1; i<=10; i++){
             System.out.println(i+" x "+N+"= "+ i*N);
+        }
+    }
+
+    public static void mediaPonderada(){
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        double[][] notas = new double[N][3];
+        for (int i =0; i<N; i++){
+            for (int j=0; j<3; j++){
+                notas[i][j] = sc.nextDouble();
+            }
+        }
+        for (int i =0; i<N; i++){
+            double media = (notas[i][0] * 2 + notas[i][1] * 3 + notas[i][2] * 5)/10;
+            System.out.printf("%.1f\n", media);
         }
     }
 }
