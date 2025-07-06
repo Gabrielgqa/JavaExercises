@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LevelThree {
     public static void main(String[] args){
-        calculoSimples();
+        oMaior();
     }
 
     public static void calculoSimples(){
@@ -22,5 +22,20 @@ public class LevelThree {
         double valorTotal = quantidade1*valor1 + quantidade2*valor2;
 
         System.out.printf("VALOR A PAGAR: R$ %.2f", valorTotal);
+    }
+
+    public static void oMaior(){
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        int maiorAB = (a + b + Math.abs(a - b)) / 2;
+        int maior = (maiorAB + c + Math.abs(maiorAB - c)) / 2;
+
+        System.out.println(maior + " eh o maior");
+
+        sc.close();
     }
 }
