@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LevelTwo {
     public static void main(String[] args){
-        salarioComBonus();
+        salario();
     }
 
     public static void media1(){
