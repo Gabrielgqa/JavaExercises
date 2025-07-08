@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LevelThree {
     public static void main(String[] args){
-        oMaior();
+        formulaDeBhaskara();
     }
 
     public static void calculoSimples(){
@@ -37,5 +37,26 @@ public class LevelThree {
         System.out.println(maior + " eh o maior");
 
         sc.close();
+    }
+
+    public static void formulaDeBhaskara(){
+        Scanner sc = new Scanner(System.in);
+        double A = sc.nextDouble();
+        double B = sc.nextDouble();
+        double C = sc.nextDouble();
+        double delta = B * B - 4 * A * C;
+
+        if (A == 0 || delta < 0) {
+            System.out.println("Impossivel calcular");
+        } else {
+            double sqrtDelta = Math.sqrt(delta);
+            double R1 = (-B + sqrtDelta) / (2 * A);
+            double R2 = (-B - sqrtDelta) / (2 * A);
+
+            System.out.printf("R1 = %.5f%n", R1);
+            System.out.printf("R2 = %.5f%n", R2);
+        }
+        sc.close();
+
     }
 }
